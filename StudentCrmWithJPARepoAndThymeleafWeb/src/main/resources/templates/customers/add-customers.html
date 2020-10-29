@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:insert="customers/header :: headerlink">
+</head>
+<body class="Site"><!-- class="d-flex flex-column h-100" -->
+<div th:insert="customers/header :: header"></div>
+
+<main role="main" class="SiteContent"><!-- class="flex-shrink-0" -->
+<section class="customerList my-2">
+<div class="container-fluid">
+<div class="text-center py-5">
+<div th:if="${customer.firstName != null && customer.firstName !=''}">
+<h1 class="section-heading py-5 font-weight-normal">Update Customers</h1>
+</div>
+<div th:if="${customer.firstName == null || customer.firstName ==''}">
+<h1 class="section-heading py-5 font-weight-normal">Add Customers</h1>
+</div>
+<div class="mx-auto heading-line"></div>
+</div>
+<div class="row mt-0">
+<div class="col-md-8 offset-md-2 mt-0">
+<form class="form-signin" action="#" th:action="@{/customer/saveORUpdateCustomer}" th:object="${customer}" method="POST">
+<div class="form-label-group">
+<input type="hidden" th:field="*{id}"/>
+<input id="firstName" th:field="*{firstName}" class="form-control"  placeholder="First Name"/>
+<label for="firstName">First Name</label>
+<div class ="error">
+<span th:errors="*{firstName}" class="errors"></span>
+</div>
+</div>
+<div class="form-label-group">
+<input id="lastName" th:field="*{lastName}" class="form-control" placeholder="Last Name" />
+<label for="lastName">Last Name</label>
+<div class ="error">
+<span th:errors="*{lastName}" class="errors"></span>
+</div>
+</div>
+<div class="form-label-group">
+<input id="email" th:field="*{email}" class="form-control" placeholder="Email Id" />
+<label for="email">EmailId</label>
+<div class ="error">
+<span th:errors="*{email}" class="errors"></span>
+</div>
+</div>
+<input type="submit" value="Submit" class="btn btn-primary btn-lg btn-block"/>
+</form>
+</div>
+</div>
+</div>
+</section>
+  </main>
+<div th:insert="customers/footer :: footer"></div>
+<!-- <div th:insert="customers/footer :: footerlink"></div> -->
+</body>
+</html>

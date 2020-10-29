@@ -1,0 +1,21 @@
+.Site{
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+}
+.SiteContent{
+	flex: 1;
+}
+.footer{
+	/* position: absolute;
+	bottom: 0; */
+	width: 100%;
+	height: auto;
+	line-height: 60px;
+	background: #343a40;
+	color: white;
+}
+.errors{
+	color: red;
+	font-size: small;
+}
