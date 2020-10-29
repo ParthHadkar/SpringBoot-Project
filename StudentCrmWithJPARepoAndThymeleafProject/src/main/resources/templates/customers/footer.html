@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head></head>
+<body >
+<!--==========================
+    Footer
+  ============================-->
+  <footer id="footer" th:fragment="footer" class="footer mt-auto py-3 "><!-- fixed-bottom -->
+   
+    <div class="container ">
+      <div class="copyright text-center">
+        &copy;<script>document.write(new Date().getFullYear());</script> Copyright <strong>StudentCRM</strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- Designed by <a href=""></a> -->
+      </div>
+    </div>
+   <!--  <div th:fragment="footerlink"> -->
+<script type="text/javascript" th:src="@{/jquery/js/jquery-3.5.1.js}"></script>
+<!-- <script type="text/javascript" th:src="@{/jquery/js/jquery.min.js}"></script>
+<script type="text/javascript" th:src="@{/jquery/js/jquery-migrate.min.js}"></script> -->
+<!-- <script type="text/javascript" th:src="@{/popper/js/popper.min.js}"></script>-->    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+<script type="text/javascript" th:src="@{/bootstrap/js/bootstrap.bundle.min.js}"></script>
+
+ <script type="text/javascript" th:src="@{/dtable/DataTables/datatables.min.js}"></script>
+ 
+ <script type="text/javascript" th:src="@{/js/offcanvas.js}"></script>
+<!-- </div> -->
+  </footer><!-- #footer -->
+
+
+</body>
+</html>
